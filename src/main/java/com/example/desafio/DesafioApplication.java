@@ -43,14 +43,12 @@ public class DesafioApplication {
 			}
 
 			if (init_human > init_orc) {
-				//System.out.println("O humano ataca dessa vez!");
 				init_win = "Humano";
 			} else {
-				//System.out.println("O orc ataca dessa vez!");
 				init_win = "Orc";
 			}
-			// return init_win;
 			System.out.println(turn + "º turno.");
+			System.out.println(init_win + " ataca dessa vez!");
 
 			if (init_win == "Humano") {
 				atk = h.attack();
@@ -60,11 +58,10 @@ public class DesafioApplication {
 				if (atk > def) {
 					damage = h.damage();
 					System.out.println("O valor de dano desferido foi:" + damage);
-					// o.setLifePoints(o.getLifePoints() - damage);
 					o_lifepoints -= damage;
-					System.out.println(" ");
 					winner = "Humano";
 					System.out.println("Pontos de vida restantes do orc:" + o_lifepoints);
+					System.out.println(" ");
 				} else {
 					System.out.println("O ataque foi bloqueado \n");
 				}
@@ -78,11 +75,10 @@ public class DesafioApplication {
 				if (atk > def) {
 					damage = o.damage();
 					System.out.println("O valor de dano desferido foi:" + damage);
-					// h.setLifePoints(h.getLifePoints() - damage);
 					h_lifepoints -= damage;
-					System.out.println(" ");
 					winner = "Orc";
 					System.out.println("Pontos de vida restantes do humano:" + h_lifepoints);
+					System.out.println(" ");
 				} else {
 					System.out.println("O ataque foi bloqueado \n");
 				}
