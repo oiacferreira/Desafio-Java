@@ -1,4 +1,4 @@
-package com.example.desafio.entities;
+package com.example.desafio.domain;
 import java.util.Random;
 
 public class Dice {

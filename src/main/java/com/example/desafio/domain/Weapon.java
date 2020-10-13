@@ -1,4 +1,4 @@
-package com.example.desafio.entities;
+package com.example.desafio.domain;
 
 public class Weapon {
 
