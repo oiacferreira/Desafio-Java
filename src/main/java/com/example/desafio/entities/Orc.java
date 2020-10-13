@@ -5,9 +5,9 @@ import java.io.Serializable;
 public class Orc implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-	private int lifePoints = 20;
-	private int str = 2;
-	private int agi = 0;
+	private int lifePoints;
+	private int str;
+	private int agi;
 	
 	
 	public Orc() {
@@ -52,15 +52,19 @@ public class Orc implements Serializable{
 	}
 	
 	public int initiative() {
-		return Dice.RollDice(20) + agi;
+		return Dice.RollDice(19) + agi;
 	}
 	
 	public int attack() {
-		return Dice.RollDice(20) + agi + Club.getAtack();
+		return Dice.RollDice(19) + agi + Club.getAtack();
 	}
 	
 	public int defense() {
-		return Dice.RollDice(20) + agi + Club.getDefense();
+		return Dice.RollDice(19) + agi + Club.getDefense();
+	}
+	
+	public int damage() {
+		return (Dice.RollDice(7) + str);
 	}
 
 

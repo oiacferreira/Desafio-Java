@@ -9,7 +9,7 @@ public class Dice {
 	}
 
 	public static int RollDice(int sides) {
-		int rnd = random.nextInt(sides);
+		int rnd = random.nextInt(sides) + 1;
 		return rnd;
 	}
 }

@@ -5,9 +5,9 @@ import java.io.Serializable;
 public class Human implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	private int lifePoints = 12;
-	private int str = 1;
-	private int agi = 2;
+	private int lifePoints;
+	private int str;
+	private int agi;
 
 	public Human() {
 	}
@@ -43,15 +43,19 @@ public class Human implements Serializable {
 	}
 
 	public int initiative() {
-		return Dice.RollDice(20) + agi;
+		return Dice.RollDice(19) + agi;
 	}
 
 	public int attack() {
-		return Dice.RollDice(20) + agi + Sword.getAtack();
+		return Dice.RollDice(19) + agi + Sword.getAtack();
 	}
 
 	public int defense() {
-		return (Dice.RollDice(20) + agi + Sword.getDefense());
+		return (Dice.RollDice(19) + agi + Sword.getDefense());
+	}
+	
+	public int damage() {
+		return (Dice.RollDice(5) + str);
 	}
 
 	@Override
