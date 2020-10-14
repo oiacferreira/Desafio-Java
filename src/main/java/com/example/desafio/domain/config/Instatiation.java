@@ -20,12 +20,10 @@ public class Instatiation implements CommandLineRunner {
 		
 		personaRepository.deleteAll();
 		
-		Persona orc = new Persona(null, "Orc", 20, 1, 0);	
-		Persona human = new Persona(null, "Human", 12, 2, 1); 
-		Persona caio = new Persona(null, "Caio", 30, 3, 2); 
-		Persona deb = new Persona(null, "Deb", 22, 3, 3); 
+		Persona orc = new Persona("1", "Orc", 20, 1, 0);	
+		Persona human = new Persona("2", "Human", 12, 2, 1); 
 		
-		personaRepository.saveAll(Arrays.asList(human,orc,caio));
+		personaRepository.saveAll(Arrays.asList(orc, human));
 	}
 
 }

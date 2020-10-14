@@ -28,9 +28,17 @@ public class Persona implements Serializable {
 		this.str = str;
 		this.agi = agi;
 	}
+	
+	public Persona(String id, String name, String lifePoints, String str, String agi) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.lifePoints = Integer.parseInt(lifePoints);
+		this.str = Integer.parseInt(str);
+		this.agi = Integer.parseInt(agi);
+	}
 
-	
-	
+
 	public String getId() {
 		return id;
 	}

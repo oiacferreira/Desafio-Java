@@ -8,4 +8,5 @@ import com.example.desafio.domain.Persona;
 @Repository
 public interface PersonaRepository extends MongoRepository<Persona, String> {
 
+
 }
