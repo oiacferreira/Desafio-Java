@@ -7,9 +7,11 @@ spring:
     port: 5672
     username: guest
     password: guest
+    template:      exchange: ex.producer.desafio      routing-key: rk.producer.desafio
     exchenge:
       producer: ex.producer.desafio
     routing-key:
       producer: rk.producer.desafio
     deadletter:
       producer: dl.producer.desafio
+      

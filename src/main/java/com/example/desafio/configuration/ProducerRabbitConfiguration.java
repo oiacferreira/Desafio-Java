@@ -43,11 +43,13 @@ public class ProducerRabbitConfiguration {
 		return new Queue(queue, true, false, false, args);
 	}
 	
+	@Bean
 	public org.springframework.amqp.core.Binding bindingQueue() {
 		return BindingBuilder.bind(queue())
 				.to(exchenge()).with(queue);
 	}
 	
+	@Bean
 	public org.springframework.amqp.core.Binding bindingDeadLetter(){
 		return BindingBuilder.bind(deadletter())
 					.to(exchenge()).with(deadLetter);
