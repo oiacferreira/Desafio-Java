@@ -5,6 +5,6 @@ Projeto realizado com o intuito de realizar o desafio de desenvolvedor java util
 também utilizei o Postaman para testar as requisições REST e o Docker para habilitar o RabbitMQ.
 
 
-baixar o projeto e executar como Spring boot app.
+baixar o projeto e executar via prompt de comando.
 
 Obrigado pela atenção.
